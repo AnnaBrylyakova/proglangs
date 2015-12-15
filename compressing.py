@@ -29,7 +29,7 @@ def setup_parser():
         description='This program runs k-repeatings searching for string (or list with several strings). '
                     'The algorithm was written in C++.',
         epilog='This algorithm was proposed as task 1.4 in 2nd semester SHAD.')
-    parser.add_argument('count', nargs='?', default=1, help='Quantity of strings', type=int)
+    parser.add_argument('count', nargs='?', default=2, help='Quantity of strings', type=int)
 
     return parser
 
