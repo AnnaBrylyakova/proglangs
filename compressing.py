@@ -25,11 +25,8 @@ def setup_parser():
     :rtype: asp.ArgumentParser
     """
     parser = asp.ArgumentParser(
-        'Searching max k-repeatings in strings',
-        description='This program runs k-repeatings searching for string (or list with several strings). '
-                    'The algorithm was written in C++.',
-        epilog='This algorithm was proposed as task 1.4 in 2nd semester SHAD.')
-    parser.add_argument('count', nargs='?', default=2, help='Quantity of strings', type=int)
+        'Searching for max int k and string t where s is the same is string t repeated k times',
+    parser.add_argument('count', nargs='?', default=2, help='Quantity of random generated strings', type=int)
 
     return parser
 
@@ -42,7 +39,7 @@ if __name__ == "__main__":
     print("\tRetrieving string TIME: {:.5f} sec".format(end - start))
 
     start = time.process_time()
-    results = compressor.count_rep_list(strings)
+    results = compressor.compress_list(strings)
     [print('\nSTRING= ', s, '\nRESULT= ', res) for s, res in zip(strings, results)]
     end = time.process_time()
     print("\tProcessing algorithm TIME: {:.5f} sec".format(end - start))
