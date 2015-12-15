@@ -14,7 +14,7 @@ using std::string;
  */
 namespace compressor {
     using std::vector;
-    
+
     vector<int> z_function(string str) {
         using std::min;
         int len = static_cast<int>(str.length());
@@ -95,7 +95,7 @@ PyMODINIT_FUNC PyInit_compressor() {
     static PyModuleDef ModuleDef = {
             PyModuleDef_HEAD_INIT,
             "compressor",
-            "solving Task 1.4. (SHAD, 2nd semester) for list of strings or for the single one.",
+            "project",
             -1, ModuleMethods,
             NULL, NULL, NULL, NULL
     };
