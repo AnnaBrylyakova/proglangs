@@ -7,13 +7,14 @@ extern "C" {
     #include <Python.h>
 }
 
-using std::vector;
 using std::string;
 
 /**
- * The namespace for.
+ * The namespace for сompressor.
  */
 namespace compressor {
+    using std::vector;
+    
     vector<int> z_function(string str) {
         using std::min;
         int len = static_cast<int>(str.length());
