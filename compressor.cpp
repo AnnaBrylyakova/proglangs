@@ -55,7 +55,7 @@ namespace compressor {
  * Run algorithm for list of strings.
  * Returns list of numbers.
  */
-PyObject* comporess_list(PyObject *mod, PyObject *args){
+PyObject* compress_list(PyObject *mod, PyObject *args){
     PyObject *inputList = PyTuple_GetItem(args, 0);
     PyObject *outputList = PyList_New(0);
     char* str;
@@ -88,7 +88,7 @@ PyObject* comporess_list(PyObject *mod, PyObject *args){
  */
 PyMODINIT_FUNC PyInit_compressor() {
     static PyMethodDef ModuleMethods[] = {
-            {"compressor", compress_list, METH_VARARGS,
+            {"compress_list", compress_list, METH_VARARGS,
                     "compressing"},
             { NULL, NULL, 0, NULL}
     };

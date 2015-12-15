@@ -25,7 +25,7 @@ def setup_parser():
     :rtype: asp.ArgumentParser
     """
     parser = asp.ArgumentParser(
-        'Searching for max int k and string t where s is the same is string t repeated k times',
+        'Searching for max int k and string t where s is the same is string t repeated k times')
     parser.add_argument('count', nargs='?', default=2, help='Quantity of random generated strings', type=int)
 
     return parser
@@ -40,6 +40,7 @@ if __name__ == "__main__":
 
     start = time.process_time()
     results = compressor.compress_list(strings)
-    [print('\nSTRING= ', s, '\nRESULT= ', res) for s, res in zip(strings, results)]
+    for s,res in zip(strings, results):
+        print('\nSTRING= ', s, '\nRESULT= ', res)
     end = time.process_time()
     print("\tProcessing algorithm TIME: {:.5f} sec".format(end - start))
